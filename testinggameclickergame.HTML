@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLick Me, Earn Points!</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+        #clickButton {
+            font-size: 20px;
+            padding: 15px 30px;
+            cursor: pointer;
+        }
+        #score {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Click Me, Earn Points!</h1>
+    <button id="clickButton">Click Me!</button>
+    <p id="score">Score: 0</p>
+    
+    <script>
+        let score = 0;
+        document.getElementById("clickButton").addEventListener("click", function() {
+            score++;
+            document.getElementById("score").textContent = "Score: " + score;
+        });
+    </script>
+</body>
+</html>
