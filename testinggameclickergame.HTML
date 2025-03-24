@@ -3,34 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CLick Me, Earn Points!</title>
+    <title>Click Me, Earn Points!</title>
     <style>
         body {
             text-align: center;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin-top: 50px;
+            background-color: #e9ecef;
+            color: #343a40;
         }
         #clickButton {
             font-size: 20px;
             padding: 15px 30px;
             cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        #clickButton:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
         }
         #score {
             font-size: 24px;
             margin-top: 20px;
+            font-weight: bold;
+        }
+        header {
+            margin-bottom: 30px;
+        }
+        footer {
+            margin-top: 50px;
+            font-size: 14px;
+            color: #6c757d;
         }
     </style>
 </head>
 <body>
-    <h1>Click Me, Earn Points!</h1>
-    <button id="clickButton">Click Me!</button>
-    <p id="score">YOUR POINTS: 0</p>
-    
+    <header>
+        <h1>Click Me, Earn Points!</h1>
+    </header>
+    <main>
+        <button id="clickButton">Click Me!</button>
+        <p id="score">YOUR POINTS: 0</p>
+    </main>
+    <footer>
+        &copy; 2023 Clicker Game. All rights reserved.
+    </footer>
     <script>
         let score = 0;
         document.getElementById("clickButton").addEventListener("click", function() {
             score++;
-            document.getElementById("score").textContent = "Score: " + score;
+            document.getElementById("score").textContent = "YOUR POINTS: " + score;
         });
     </script>
 </body>
